@@ -15,7 +15,7 @@ function Table({ columns, rows }) {
                         row.values.map((col, j) => (
                             <tr className="border-2">
                                 {EsCero(j, row)}
-                                <td className="border-2 border- p-2 w-2/3" key={j}>{col}</td>
+                                <td className="border-2 border- p-2 w-2/3" key={`${i}-${j}`}>{col}</td>
                             </tr>
                         ))
 
