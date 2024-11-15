@@ -28,7 +28,7 @@ function Table({ columns, rows }) {
 function EsCero(i, row) {
     if (i === 0) {
         return (
-            <th className="border-2 p-2 text-center border-spacing-2 bg-blue-200 w-1/3" rowSpan={row.values.length}>{row.header}</th>
+            <th  key={`${i}-header-row`} className="border-2 p-2 text-center border-spacing-2 bg-blue-200 w-1/3" rowSpan={row.values.length}>{row.header}</th>
         );
     } else {
         return null;
