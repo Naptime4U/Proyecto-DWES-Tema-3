@@ -13,9 +13,9 @@ function Table({ columns, rows }) {
                     {rows.map((row, i) => (
 
                         row.values.map((col, j) => (
-                            <tr className="border-2">
+                            <tr key={`${i}-${j}`} className="border-2">
                                 {EsCero(j, row)}
-                                <td className="border-2 border- p-2 w-2/3" key={`${i}-${j}`}>{col}</td>
+                                <td className="border-2 border- p-2 w-2/3" >{col}</td>
                             </tr>
                         ))
 
@@ -28,7 +28,7 @@ function Table({ columns, rows }) {
 function EsCero(i, row) {
     if (i === 0) {
         return (
-            <th  key={`${i}-header-row`} className="border-2 p-2 text-center border-spacing-2 bg-blue-200 w-1/3" rowSpan={row.values.length}>{row.header}</th>
+            <th className="border-2 p-2 text-center border-spacing-2 bg-blue-200 w-1/3" rowSpan={row.values.length}>{row.header}</th>
         );
     } else {
         return null;
